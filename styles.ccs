@@ -10,6 +10,9 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -56,4 +59,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
