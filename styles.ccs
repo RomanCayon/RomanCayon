@@ -1,16 +1,6 @@
-/* Reset default styles and set up box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
 body {
-    background-image: url('BOB.jpg');
-    background-size: cover;
-    background-position: center;
-    background-color: #f0f0f0; /* Fallback color */
+    background: url("BOB.jpg") no-repeat center fixed;
+    background-size: cover; /* Ensure the background image covers the entire page */
 }
 
 /* Header styling */
