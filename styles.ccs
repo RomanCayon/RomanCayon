@@ -5,7 +5,8 @@ body {
     box-sizing: border-box;
     line-height: 1.6;
     color: #fff; /* Set text color to white */
-    background-color: #000; /* Set background color to black */
+    background: url('BOB.jpg') no-repeat center center fixed; /* Use BOB.jpg as background */
+    background-size: cover; /* Ensure the background image covers the entire page */
     text-align: center; /* Center align all text content */
 }
 
