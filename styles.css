@@ -16,7 +16,8 @@ header {
 }
 
 header h1,
-header h2 {
+header h2,
+header h3 {
     margin: 0;
     font-size: 2.5em;
     color: white; /* Header text color */
