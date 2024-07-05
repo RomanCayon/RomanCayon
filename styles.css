@@ -30,7 +30,7 @@ section {
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    color: #333; /* Section text color */
+    color: black; /* Section text color */
 }
 
 h3 {
@@ -68,4 +68,5 @@ section#experience,
 section#skills,
 section#contact {
     background: none;
+    color: black; /* Text color for these sections */
 }
