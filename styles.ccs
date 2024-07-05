@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('https://raw.githubusercontent.com/username/repo/branch-name/images/background.jpg') no-repeat center center fixed;
+    background: url('images/BOB.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
 }
