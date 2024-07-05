@@ -27,10 +27,11 @@ header h2 {
 
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 0; /* Remove margin */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: black; /* Section text color */
+    background-color: transparent; /* Make section background transparent */
 }
 
 h3 {
@@ -68,5 +69,4 @@ section#experience,
 section#skills,
 section#contact {
     background: none;
-    color: black; /* Text color for these sections */
 }
