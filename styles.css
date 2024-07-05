@@ -28,7 +28,6 @@ header h2 {
 section {
     padding: 20px;
     margin: 20px;
-    background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: #333; /* Section text color */
@@ -61,4 +60,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Remove background for specific sections */
+section#about,
+section#experience,
+section#skills,
+section#contact {
+    background: none;
 }
