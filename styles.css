@@ -1,11 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: url('https://raw.githubusercontent.com/username/repo/branch-name/images/BOB.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
+    background: url("images/BOB.jpg") no-repeat center fixed;
+    background-size: cover; /* Ensure the background image covers the entire page /
 }
 
 header {
