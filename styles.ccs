@@ -5,7 +5,9 @@ body {
     box-sizing: border-box;
     line-height: 1.6;
     color: #333;
-    background-color: #f0f0f0; /* Fallback color if background image fails */
+    background-image: url('BOB.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-position: center; /* Center the background image */
 }
 
 header {
