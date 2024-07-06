@@ -9,6 +9,7 @@ body {
     min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
 }
 
 header {
@@ -65,7 +66,7 @@ section {
     border-radius: 5px;
     box-shadow: none; /* Remove shadow */
     color: white; /* Section text color */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    background: transparent; /* Fully transparent background */
 }
 
 h3 {
