@@ -1,15 +1,14 @@
+/* General styles applicable to all pages */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('images/background1.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: white; /* Set all text color to white */
     min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
 }
 
 header {
@@ -66,7 +65,7 @@ section {
     border-radius: 5px;
     box-shadow: none; /* Remove shadow */
     color: white; /* Section text color */
-    background: transparent; /* Fully transparent background */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
 }
 
 h3 {
@@ -97,4 +96,26 @@ footer {
     padding: 10px 0;
     margin-top: auto; /* Push footer to the bottom of the page */
     width: 100%;
+}
+
+/* Specific styles for each HTML file */
+
+body.about {
+    background: url('images/background_about.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.experience {
+    background: url('images/background_experience.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.skills {
+    background: url('images/background_skills.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.contact {
+    background: url('images/background_contact.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
