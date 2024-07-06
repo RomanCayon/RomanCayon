@@ -5,16 +5,16 @@ body {
     padding: 0;
     background: url('images/background1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
-    min-height: 100vh;
+    color: white; /* Set all text color to white */
+    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background: transparent;
-    color: white;
-    padding: 0.5rem 0;
+    background: transparent; /* Transparent background */
+    color: white; /* Header text color */
+    padding: 0.5rem 0; /* Adjusted padding for smaller header */
     position: relative;
     display: flex;
     align-items: center;
