@@ -45,16 +45,14 @@ nav ul li a {
     text-decoration: none;
 }
 
-.header-text {
+.main-title {
     text-align: center;
-    width: 100%;
+    margin-top: 50px; /* Adjust as needed */
 }
 
-header h1,
-header h2 {
-    margin: 0;
+.main-title h1 {
     font-size: 2.5em;
-    color: white; /* Header text color */
+    color: white; /* Main title text color */
 }
 
 section {
