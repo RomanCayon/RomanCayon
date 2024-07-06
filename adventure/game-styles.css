@@ -1,1 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #444;
+    border-radius: 10px;
+}
+
+#game-output {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background: #222;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#player-input {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#submit-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background: #666;
+}
 
