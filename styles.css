@@ -17,14 +17,8 @@ header {
     padding: 0.5rem 0; /* Adjusted padding for smaller header */
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content */
-}
-
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the navigation */
+    flex-direction: column;
+    align-items: center; /* Center the content */
 }
 
 nav ul {
