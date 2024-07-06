@@ -5,28 +5,26 @@ body {
     padding: 0;
     background: url('images/background1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white; /* Set all text color to white */
-    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+    color: white;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background: transparent; /* Transparent background */
-    color: white; /* Header text color */
-    padding: 0.5rem 0; /* Adjusted padding for smaller header */
+    background: transparent;
+    color: white;
+    padding: 0.5rem 0;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the navigation bar */
+    justify-content: center; /* Center the content */
 }
 
 header .container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the container content */
-    width: 100%;
-    padding: 0 20px;
+    justify-content: center; /* Center the navigation */
 }
 
 nav ul {
@@ -41,56 +39,56 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Navigation link color */
+    color: white;
     text-decoration: none;
 }
 
 .main-title {
     text-align: center;
-    margin-top: 50px; /* Adjust as needed */
+    margin-top: 50px;
 }
 
 .main-title h1 {
     font-size: 2.5em;
-    color: white; /* Main title text color */
+    color: white;
     display: inline-block;
 }
 
 section {
     padding: 20px;
-    margin: 20px 0; /* Add margin bottom to sections */
+    margin: 20px 0;
     border-radius: 5px;
-    box-shadow: none; /* Remove shadow */
-    color: white; /* Section text color */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 h3 {
     padding-bottom: 5px;
     margin-bottom: 10px;
-    color: white; /* Heading text color */
-    border-bottom: none; /* Remove border-bottom */
+    color: white;
+    border-bottom: none;
 }
 
 ul {
     list-style: none;
     padding: 0;
-    color: white; /* List text color */
+    color: white;
 }
 
 ul li {
-    background: transparent; /* Transparent background */
-    margin: 0; /* Remove margin */
+    background: transparent;
+    margin: 0;
     padding: 10px;
-    border-left: 5px solid transparent; /* Remove border */
-    color: white; /* List item text color */
+    border-left: 5px solid transparent;
+    color: white;
 }
 
 footer {
-    background: transparent; /* Transparent background */
-    color: white; /* Footer text color */
+    background: transparent;
+    color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto; /* Push footer to the bottom of the page */
+    margin-top: auto;
     width: 100%;
 }
