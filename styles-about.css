@@ -1,0 +1,49 @@
+/* styles-about.css */
+
+body {
+    background: url('images/about-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 1rem 0; /* Adjusted padding */
+}
+
+header .container {
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 80px; /* Adjusted logo size */
+}
+
+.main-title h1 {
+    font-size: 2em; /* Adjusted font size */
+    margin-top: 30px; /* Increased margin */
+}
+
+section {
+    padding: 30px;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+h3 {
+    color: #fff; /* Heading text color */
+    border-bottom: 2px solid #fff; /* White border bottom */
+}
+
+ul {
+    color: #fff; /* List text color */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* Footer text color */
+    text-align: center;
+    padding: 20px 0;
+}
