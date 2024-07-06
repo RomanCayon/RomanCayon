@@ -32,6 +32,7 @@ header .container {
 
 header .logo {
     width: 80px;
+    margin-left: 20px; /* Adjust margin as needed */
 }
 
 nav ul {
