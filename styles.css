@@ -12,13 +12,14 @@ header {
     background: transparent; /* Transparent background */
     color: white; /* Header text color */
     padding: 1rem 0;
-    text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 20px;
@@ -45,7 +46,8 @@ nav ul li a {
 }
 
 .header-text {
-    margin-top: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 header h1,
