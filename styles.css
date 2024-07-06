@@ -26,7 +26,7 @@ section {
     padding: 20px;
     margin: 0; /* Remove margin */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: none; /* Remove shadow */
     color: white; /* Section text color */
     background: transparent; /* Transparent background */
 }
@@ -41,14 +41,15 @@ h3 {
 ul {
     list-style: none;
     padding: 0;
+    color: white; /* List text color */
 }
 
 ul li {
-    background: #f4f4f4;
+    background: transparent; /* Transparent background */
     margin: 0; /* Remove margin */
     padding: 10px;
-    border-left: 5px solid #333;
-    color: black; /* Text color for list items */
+    border-left: 5px solid transparent; /* Remove border */
+    color: white; /* List item text color */
 }
 
 footer {
