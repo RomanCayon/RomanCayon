@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;
     text-align: center;
     padding: 10px 0;
