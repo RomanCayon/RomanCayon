@@ -18,19 +18,15 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center the navigation bar */
 }
 
 header .container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the container content */
     width: 100%;
     padding: 0 20px;
-}
-
-header .logo {
-    width: 80px; /* Adjust the size of the logo */
-    height: auto; /* Maintain aspect ratio */
 }
 
 nav ul {
