@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Adventure Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
         <div class="main-title">
-            <h1>Text Adventure Game</h1>
+            <h1>Text Adventure Game</h1> <!-- Game title in header -->
         </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li> <!-- Adjust the path based on your file structure -->
+                <li><a href="../About/index.html">About Me</a></li> <!-- Adjust the path based on your file structure -->
+            </ul>
+        </nav>
     </header>
 
     <div id="game-container">
-        <div id="game-output"></div>
-        <input type="text" id="player-input" placeholder="Type your command...">
-        <button id="submit-btn">Submit</button>
+        <div id="game-output"></div> <!-- Game output area -->
+        <input type="text" id="player-input" placeholder="Type your command..."> <!-- Input field for player commands -->
+        <button id="submit-btn">Submit</button> <!-- Submit button for player commands -->
     </div>
 
     <footer>
-        <p>&copy; 2024 Roman Cayon. All rights reserved.</p>
+        <p>&copy; 2024 Roman Cayon. All rights reserved.</p> <!-- Copyright footer -->
     </footer>
 
-    <script src="game.js"></script>
+    <script src="game.js"></script> <!-- Link to your JavaScript file for game logic -->
 </body>
 </html>
-
