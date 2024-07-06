@@ -46,11 +46,13 @@ nav ul li a {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background: none; /* No background */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Padding top and bottom */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    left: 0; /* Align to the left */
 }
+
