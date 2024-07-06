@@ -6,12 +6,15 @@ body {
     background: url('images/background1.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white; /* Set all text color to white */
+    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background: transparent; /* Transparent background */
     color: white; /* Header text color */
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Adjusted padding for smaller header */
     position: relative;
     display: flex;
     align-items: center;
@@ -45,25 +48,24 @@ nav ul li a {
     text-decoration: none;
 }
 
-.header-text {
+.main-title {
     text-align: center;
-    width: 100%;
+    margin-top: 50px; /* Adjust as needed */
 }
 
-header h1,
-header h2 {
-    margin: 0;
+.main-title h1 {
     font-size: 2.5em;
-    color: white; /* Header text color */
+    color: white; /* Main title text color */
+    display: inline-block;
 }
 
 section {
     padding: 20px;
-    margin: 0; /* Remove margin */
+    margin: 20px 0; /* Add margin bottom to sections */
     border-radius: 5px;
     box-shadow: none; /* Remove shadow */
     color: white; /* Section text color */
-    background: transparent; /* Transparent background */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
 }
 
 h3 {
@@ -92,7 +94,6 @@ footer {
     color: white; /* Footer text color */
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto; /* Push footer to the bottom of the page */
     width: 100%;
 }
