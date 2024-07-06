@@ -70,4 +70,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial room description
     outputText(gameState.rooms[gameState.currentRoom].description);
 });
-
