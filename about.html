@@ -5,13 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Roman Cayon's Webspace</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('images/about_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Set all text color to white */
+            min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: transparent; /* Transparent background */
+            color: white; /* Header text color */
+            padding: 0.5rem 0; /* Adjusted padding for smaller header */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            width: 100px; /* Adjust the size of the logo */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white; /* Navigation link color */
+            text-decoration: none;
+        }
+
+        .main-title {
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+        .main-title h1 {
+            font-size: 2.5em;
+            color: white; /* Main title text color */
+            display: inline-block;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0; /* Add margin bottom to sections */
+            border-radius: 5px;
+            box-shadow: none; /* Remove shadow */
+            color: white; /* Section text color */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+        }
+
+        h3 {
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: white; /* Heading text color */
+            border-bottom: none; /* Remove border-bottom */
+        }
+
+        p {
+            color: white; /* Paragraph text color */
+        }
+
+        footer {
+            background: transparent; /* Transparent background */
+            color: white; /* Footer text color */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push footer to the bottom of the page */
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="about">
+<body>
     <header>
         <div class="container">
             <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
             <nav>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="skills.html">Skills</a></li>
@@ -23,13 +116,16 @@
     <div class="main-title">
         <h1>About Me</h1>
     </div>
-    <section id="about">
-        <h3>About Me</h3>
+    <section>
+        <h3>Introduction</h3>
         <p>Hello! I'm Roman Cayon, an experienced electronic technician with a passion for technology and problem-solving. I have a proven track record of diagnosing and repairing a wide range of electronic equipment and systems.</p>
+    </section>
+    <section>
+        <h3>Background</h3>
+        <p>I have a Bachelor's degree in Electronics Engineering from University XYZ. My career spans over XX years, during which I have worked at various companies, honing my skills in circuit analysis, soldering, and troubleshooting.</p>
     </section>
     <footer>
         <p>© 2024 Roman Cayon. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
