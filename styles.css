@@ -58,11 +58,11 @@ nav ul li a {
 
 section {
     padding: 20px;
-    margin: 0; /* Remove margin */
+    margin: 20px 0; /* Add margin bottom to sections */
     border-radius: 5px;
     box-shadow: none; /* Remove shadow */
     color: white; /* Section text color */
-    background: transparent; /* Transparent background */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
 }
 
 h3 {
