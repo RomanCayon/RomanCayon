@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMORPG Game</title>
+    <title>Idle MMORPG</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
-        <canvas id="game-canvas"></canvas>
+        <div id="player-info">
+            <h1>Player</h1>
+            <p>Level: <span id="level">1</span></p>
+            <p>XP: <span id="xp">0</span> / <span id="xp-to-next-level">100</span></p>
+        </div>
+        <div id="game-log">
+            <h2>Game Log</h2>
+            <ul id="log"></ul>
+        </div>
     </div>
     <script src="mmorpg.js"></script>
 </body>
