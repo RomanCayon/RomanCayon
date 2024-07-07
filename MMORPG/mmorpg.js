@@ -20,7 +20,7 @@ const player = {
     },
     heal: function(amount) {
         this.health = Math.min(this.health + amount, this.maxHealth);
-        updateUI();
+        updateUI(); // Update UI after healing
     }
 };
 
@@ -45,6 +45,7 @@ function logEvent(message) {
     if (logs.length > 5) {
         log.removeChild(logs[0]); // Remove the oldest log
     }
+} // <-- Added missing closing bracket
 
 // Log materials in the materials log
 function logMaterial(message) {
