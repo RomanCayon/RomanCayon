@@ -12,11 +12,23 @@
             <h1>Player</h1>
             <p>Level: <span id="level">1</span></p>
             <p>XP: <span id="xp">0</span> / <span id="xp-to-next-level">100</span></p>
+            <div id="xp-bar-container">
+                <div id="xp-bar"></div>
+            </div>
+            <p>Health: <span id="health">100</span></p>
         </div>
-        <canvas id="game-canvas" width="800" height="600"></canvas>
+        <div id="controls">
+            <button id="quest-button">Quest</button>
+            <button id="gather-button">Gather Materials</button>
+            <button id="sleep-button">Sleep</button>
+        </div>
         <div id="game-log">
             <h2>Game Log</h2>
             <ul id="log"></ul>
+        </div>
+        <div id="materials-log">
+            <h2>Materials Log</h2>
+            <ul id="materials"></ul>
         </div>
     </div>
     <script src="mmorpg.js"></script>
