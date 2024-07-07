@@ -1,3 +1,16 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -8,6 +21,8 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 header h1 {
@@ -34,4 +49,37 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#game-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+ul#log-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul#log-list li {
+    margin-bottom: 5px;
 }
