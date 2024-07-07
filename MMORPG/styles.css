@@ -14,10 +14,19 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #player-info, #game-log {
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#game-canvas {
+    border: 1px solid #ccc;
+    background-color: #fff; /* Canvas background color */
 }
 
 #log {
