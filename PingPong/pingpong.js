@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ball = document.getElementById('ball');
     const paddle = document.getElementById('paddle');
+    const playerScoreDisplay = document.getElementById('player-score');
+    const computerScoreDisplay = document.getElementById('computer-score');
 
     let ballX = 290;
     let ballY = 190;
     let ballSpeedX = 5;
     let ballSpeedY = 2;
+    let playerScore = 0;
+    let computerScore = 0;
 
     function updateBall() {
         ballX += ballSpeedX;
@@ -17,6 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (ballX >= 580 || ballX <= 0) {
             ballSpeedX = -ballSpeedX;
+            if (ballX <= 0) {
+                computerScore++;
+                computerScoreDisplay.textContent = computerScore;
+            } else if (ballX >= 580) {
+                playerScore++;
+                playerScoreDisplay.textContent = playerScore;
+            }
         }
 
         // Check collision with paddle
