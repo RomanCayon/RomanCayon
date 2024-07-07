@@ -1,85 +1,72 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f0f0f0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-nav ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 20px;
 }
 
 #game-container {
+    max-width: 800px;
+    margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#player-stats, #actions, #log {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#player-stats h2, #actions h2, #log h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
-ul#log-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
+button:hover {
+    background-color: #45a049;
 }
 
-ul#log-list li {
-    margin-bottom: 5px;
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
 }
