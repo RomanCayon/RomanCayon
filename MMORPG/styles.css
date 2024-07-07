@@ -1,17 +1,26 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Example background color */
-}
-
-#game-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#game-canvas {
-    border: 1px solid #ccc;
-    background-color: #fff; /* Canvas background color */
+#game-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#player-info, #game-log {
+    margin-bottom: 20px;
+}
+
+#log {
+    list-style-type: none;
+    padding: 0;
 }
