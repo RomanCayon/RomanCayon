@@ -1,4 +1,3 @@
-/* Add your styles here */
 body {
     margin: 0;
     padding: 0;
@@ -14,5 +13,5 @@ body {
 
 #game-canvas {
     border: 1px solid #ccc;
-    /* Add specific canvas styles */
+    background-color: #fff; /* Canvas background color */
 }
