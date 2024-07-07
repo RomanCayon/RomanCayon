@@ -39,7 +39,12 @@ function logEvent(message) {
     const listItem = document.createElement('li');
     listItem.innerText = message;
     log.appendChild(listItem);
-}
+
+    // Limit the number of logs to 5
+    const logs = log.getElementsByTagName('li');
+    if (logs.length > 5) {
+        log.removeChild(logs[0]); // Remove the oldest log
+    }
 
 // Log materials in the materials log
 function logMaterial(message) {
