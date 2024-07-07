@@ -1,17 +1,10 @@
-// Get the canvas element
-const canvas = document.getElementById('game-canvas');
-const ctx = canvas.getContext('2d');
-
 // Player object
 const player = {
     level: 1,
     xp: 0,
     xpToNextLevel: 100,
-    x: canvas.width / 2 - 25,
-    y: canvas.height / 2 - 25,
-    width: 50,
-    height: 50,
-    color: '#00f',
+    health: 100,
+    maxHealth: 100,
     gainXp: function(amount) {
         this.xp += amount;
         if (this.xp >= this.xpToNextLevel) {
@@ -25,9 +18,9 @@ const player = {
         this.xpToNextLevel = Math.floor(this.xpToNextLevel * 1.5);
         logEvent(`You leveled up to level ${this.level}!`);
     },
-    draw: function() {
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+    heal: function(amount) {
+        this.health = Math.min(this.health + amount, this.maxHealth);
+        updateUI();
     }
 };
 
@@ -36,6 +29,8 @@ function updateUI() {
     document.getElementById('level').innerText = player.level;
     document.getElementById('xp').innerText = player.xp;
     document.getElementById('xp-to-next-level').innerText = player.xpToNextLevel;
+    document.getElementById('health').innerText = player.health;
+    document.getElementById('xp-bar').style.width = (player.xp / player.xpToNextLevel * 100) + '%';
 }
 
 // Log events in the game log
@@ -46,29 +41,53 @@ function logEvent(message) {
     log.appendChild(listItem);
 }
 
-// Simulate gaining XP over time
-function gainXpOverTime() {
-    const xpPerInterval = 10;
-    player.gainXp(xpPerInterval);
-    logEvent(`Gained ${xpPerInterval} XP.`);
-    setTimeout(gainXpOverTime, 3000); // Gain XP every 3 seconds
+// Log materials in the materials log
+function logMaterial(message) {
+    const materialsLog = document.getElementById('materials');
+    const listItem = document.createElement('li');
+    listItem.innerText = message;
+    materialsLog.appendChild(listItem);
 }
 
-// Game loop function
-function gameLoop() {
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Draw player
-    player.draw();
-
-    // Request animation frame to loop the game
-    requestAnimationFrame(gameLoop);
+// Simulate a quest
+function quest() {
+    const xpGained = 20;
+    const questLog = [
+        "You fought off a band of goblins!",
+        "You rescued a villager from wolves!",
+        "You found a hidden treasure!"
+    ];
+    const questResult = questLog[Math.floor(Math.random() * questLog.length)];
+    logEvent(questResult);
+    player.gainXp(xpGained);
 }
 
-// Start the game
+// Simulate material gathering
+function gatherMaterials() {
+    const materials = [
+        { name: 'Wood', value: 10 },
+        { name: 'Stone', value: 20 },
+        { name: 'Iron', value: 50 },
+        { name: 'Gold', value: 100 },
+    ];
+    const material = materials[Math.floor(Math.random() * materials.length)];
+    logMaterial(`You gathered ${material.name} worth ${material.value}`);
+    player.gainXp(material.value);
+}
+
+// Simulate sleeping
+function sleep() {
+    const healingAmount = 10;
+    player.heal(healingAmount);
+    logEvent(`You slept and healed ${healingAmount} health.`);
+}
+
+// Attach event listeners to buttons
+document.getElementById('quest-button').addEventListener('click', quest);
+document.getElementById('gather-button').addEventListener('click', gatherMaterials);
+document.getElementById('sleep-button').addEventListener('click', sleep);
+
+// Initialize the game
 document.addEventListener('DOMContentLoaded', (event) => {
     updateUI();
-    gainXpOverTime();
-    gameLoop();
 });
