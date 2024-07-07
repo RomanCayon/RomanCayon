@@ -14,6 +14,8 @@ const resourcesDisplay = document.getElementById('resources');
 const gatherResourcesBtn = document.getElementById('gather-resources-btn');
 const logList = document.getElementById('log-list');
 
+const MAX_LOG_ENTRIES = 10; // Maximum number of log entries to display
+
 // Event listeners
 gatherResourcesBtn.addEventListener('click', gatherResources);
 
@@ -37,6 +39,14 @@ function updatePlayerStats() {
 }
 
 function logAction(message) {
+    const logItems = logList.querySelectorAll('li');
+    
+    if (logItems.length >= MAX_LOG_ENTRIES) {
+        // Remove the oldest log entry
+        logList.removeChild(logItems[0]);
+    }
+
+    // Add new log entry
     const logItem = document.createElement('li');
     logItem.textContent = message;
     logList.appendChild(logItem);
@@ -44,4 +54,3 @@ function logAction(message) {
 
 // Initial update of player stats
 updatePlayerStats();
-
