@@ -63,12 +63,18 @@ function updatePlayerStats() {
 }
 
 function logAction(message) {
+    const logItem = document.createElement('li');
+    logItem.textContent = message;
+
+    // Insert new log entry at the top (before the first child)
+    logList.insertBefore(logItem, logList.firstChild);
+
     const logItems = logList.getElementsByTagName('li');
 
     // Check if log list exceeds maximum entries
-    if (logItems.length >= MAX_LOG_ENTRIES) {
-        // Remove the oldest entry
-        logList.removeChild(logItems[0]);
+    if (logItems.length > MAX_LOG_ENTRIES) {
+        // Remove the last entry to maintain the maximum number
+        logList.removeChild(logItems[MAX_LOG_ENTRIES]);
     }
 
     // Add new log entry
