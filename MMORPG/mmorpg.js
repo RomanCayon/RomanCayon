@@ -17,7 +17,7 @@ const gatherResourcesBtn = document.getElementById('gather-resources-btn');
 const logList = document.getElementById('log-list');
 const questList = document.getElementById('quest-list');
 
-const MAX_LOG_ENTRIES = 10; // Maximum number of log entries to display
+const MAX_LOG_ENTRIES = 5; // Maximum number of log entries to display
 
 // Event listeners
 gatherResourcesBtn.addEventListener('click', gatherResources);
