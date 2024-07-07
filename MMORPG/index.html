@@ -3,40 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idle MMORPG Game</title>
+    <title>MMORPG Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
-        <header>
-            <h1>Idle MMORPG Game</h1>
-        </header>
-        <main>
-            <div id="player-stats">
-                <h2>Player Stats</h2>
-                <ul>
-                    <li><strong>Level:</strong> <span id="level">1</span></li>
-                    <li><strong>Experience:</strong> <span id="experience">0</span></li>
-                    <li><strong>Gold:</strong> <span id="gold">0</span></li>
-                    <li><strong>Resources:</strong> <span id="resources">0</span></li>
-                </ul>
-            </div>
-            <div id="actions">
-                <h2>Actions</h2>
-                <button id="gather-resources-btn">Gather Resources</button>
-            </div>
-            <div id="log">
-                <h2>Log</h2>
-                <ul id="log-list">
-                    <!-- Log messages will be added dynamically -->
-                </ul>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
-        </footer>
+        <canvas id="game-canvas"></canvas>
     </div>
-
     <script src="mmorpg.js"></script>
 </body>
 </html>
