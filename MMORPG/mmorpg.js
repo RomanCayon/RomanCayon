@@ -45,10 +45,11 @@ function updatePlayerStats() {
 }
 
 function logAction(message) {
-    const logItems = logList.querySelectorAll('li');
-    
+    const logItems = logList.getElementsByTagName('li');
+
+    // Check if log list exceeds maximum entries
     if (logItems.length >= MAX_LOG_ENTRIES) {
-        // Remove the oldest log entry
+        // Remove the oldest entry
         logList.removeChild(logItems[0]);
     }
 
