@@ -14,8 +14,8 @@ const experienceDisplay = document.getElementById('experience');
 const goldDisplay = document.getElementById('gold');
 const resourcesDisplay = document.getElementById('resources');
 const gatherResourcesBtn = document.getElementById('gather-resources-btn');
-const logList = document.getElementById('log-list');
 const questList = document.getElementById('quest-list');
+const logList = document.getElementById('log-list');
 
 const MAX_LOG_ENTRIES = 5; // Maximum number of log entries to display
 
@@ -33,9 +33,26 @@ function gatherResources() {
     player.resources += resourcesGained;
     updatePlayerStats();
 
-
     // Log the action
     logAction(`Gathered ${resourcesGained} resources.`);
+}
+
+function questAction(questNumber) {
+    // Simulate completing a quest
+    const questReward = Math.floor(Math.random() * 20) + 10; // Random reward (10-29)
+
+    // Update player stats for completing the quest
+    player.experience += questReward;
+    questsCompleted++;
+
+    // Update quest UI to indicate completion
+    updateQuestStatus(questNumber);
+
+    // Update player stats UI
+    updatePlayerStats();
+
+    // Log the action
+    logAction(`Completed Quest ${questNumber} and gained ${questReward} experience.`);
 }
 
 function updatePlayerStats() {
@@ -70,7 +87,14 @@ function initializeQuests() {
 function createQuest(questNumber) {
     const questItem = document.createElement('li');
     questItem.textContent = `Quest ${questNumber}: Collect 10 resources`;
+    questItem.addEventListener('click', () => questAction(questNumber)); // Execute quest action on click
     return questItem;
+}
+
+function updateQuestStatus(questNumber) {
+    const questItems = questList.getElementsByTagName('li');
+    const questItem = questItems[questNumber - 1]; // Adjust index since questNumber starts from 1
+    questItem.classList.add('completed'); // Example: add completed class for styling or indication
 }
 
 // Initial update of player stats
