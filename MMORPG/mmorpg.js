@@ -6,6 +6,8 @@ let player = {
     resources: 0
 };
 
+let questsCompleted = 0; // Track completed quests
+
 // DOM elements
 const levelDisplay = document.getElementById('level');
 const experienceDisplay = document.getElementById('experience');
@@ -13,11 +15,15 @@ const goldDisplay = document.getElementById('gold');
 const resourcesDisplay = document.getElementById('resources');
 const gatherResourcesBtn = document.getElementById('gather-resources-btn');
 const logList = document.getElementById('log-list');
+const questList = document.getElementById('quest-list');
 
 const MAX_LOG_ENTRIES = 10; // Maximum number of log entries to display
 
 // Event listeners
 gatherResourcesBtn.addEventListener('click', gatherResources);
+
+// Initialize quests
+initializeQuests();
 
 // Functions
 function gatherResources() {
@@ -50,6 +56,19 @@ function logAction(message) {
     const logItem = document.createElement('li');
     logItem.textContent = message;
     logList.appendChild(logItem);
+}
+
+function initializeQuests() {
+    for (let i = 1; i <= 50; i++) {
+        const quest = createQuest(i);
+        questList.appendChild(quest);
+    }
+}
+
+function createQuest(questNumber) {
+    const questItem = document.createElement('li');
+    questItem.textContent = `Quest ${questNumber}: Collect 10 resources`;
+    return questItem;
 }
 
 // Initial update of player stats
