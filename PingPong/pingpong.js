@@ -19,25 +19,37 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ballY >= 380 || ballY <= 0) {
             ballSpeedY = -ballSpeedY;
         }
-        if (ballX >= 580 || ballX <= 0) {
-            ballSpeedX = -ballSpeedX;
-            if (ballX <= 0) {
-                computerScore++;
-                computerScoreDisplay.textContent = computerScore;
-            } else if (ballX >= 580) {
-                playerScore++;
-                playerScoreDisplay.textContent = playerScore;
-            }
-        }
 
-        // Check collision with paddle
+        // Check collision with paddles
         if (ballX <= 20 && ballY >= paddle.offsetTop && ballY <= paddle.offsetTop + paddle.offsetHeight) {
             ballSpeedX = -ballSpeedX;
+        } else if (ballX >= 580 && ballY >= paddle.offsetTop && ballY <= paddle.offsetTop + paddle.offsetHeight) {
+            ballSpeedX = -ballSpeedX;
+            playerScore++;
+            playerScoreDisplay.textContent = playerScore;
+        }
+
+        // Check if ball goes past paddles
+        if (ballX <= 0) {
+            computerScore++;
+            computerScoreDisplay.textContent = computerScore;
+            resetBall();
+        } else if (ballX >= 600) {
+            playerScore++;
+            playerScoreDisplay.textContent = playerScore;
+            resetBall();
         }
 
         // Update ball position
         ball.style.left = ballX + 'px';
         ball.style.top = ballY + 'px';
+    }
+
+    function resetBall() {
+        ballX = 290;
+        ballY = 190;
+        ballSpeedX = -ballSpeedX;
+        ballSpeedY = Math.random() < 0.5 ? -2 : 2; // Randomize initial Y speed
     }
 
     function gameLoop() {
