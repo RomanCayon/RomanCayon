@@ -33,6 +33,7 @@ function gatherResources() {
     player.resources += resourcesGained;
     updatePlayerStats();
 
+
     // Log the action
     logAction(`Gathered ${resourcesGained} resources.`);
 }
